@@ -7,13 +7,23 @@ function refreshWeather(response) {
   let windElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#current-time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#condition-icon-wrapper");
+  let windSpeedKmPerHour = response.data.wind.speed;
+  let windSpeedMetersPerSecond =
+    convertKmPerHourtoMetersPerSecond(windSpeedKmPerHour);
+  let formattedWindSpeed = formatWindSpeed(windSpeedMetersPerSecond);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   conditionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  windElement.innerHTML = `${formattedWindSpeed}m/s`;
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `            <img
+              class="condition-icon"
+              src="${response.data.condition.icon_url}"
+              alt=""
+            />`;
 }
 
 function formatDate(date) {
@@ -34,6 +44,16 @@ function formatDate(date) {
   }
 
   return `${day}, ${hours}:${minutes}`;
+}
+
+//show m/s instead of km/h
+function convertKmPerHourtoMetersPerSecond(kmPerHour) {
+  return (kmPerHour * 1000) / 3600;
+}
+
+//truncate a decimal number to keep only the first decimal place without rounding
+function formatWindSpeed(value) {
+  return Math.floor(value * 10) / 10;
 }
 
 function searchCity(city) {
