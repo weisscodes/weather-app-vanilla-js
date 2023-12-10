@@ -3,17 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather APP</title>
   </head>
   <body>
-    <h1>This is the new app on Vanilla JS</h1>
     <div class="app-container">
       <div class="app-header">
-        <img src="#" alt="" class="app-logo" />
-        <div class="app-form-wrapper">
-          <form>
-            <input type="search" placeholder="Enter a city..." required />
-            <input type="submit" value="Search" />
+        <img
+          src="images/logo-synoptik.svg"
+          alt="synoptik-app-logo"
+          class="app-logo"
+        />
+        <div class="app-search-wrapper">
+          <form class="app-search-form">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Enter a city..."
+              required
+            />
+            <input class="search-button" type="submit" value="Search" />
           </form>
         </div>
       </div>
@@ -26,28 +41,39 @@
             <p class="weather-info">Saturday, 15:45, scattered cloud</p>
           </div>
           <div class="results-additional-info">
-            <p class="weather-info">Humidity: 60%, Wind: 3.09km/h</p>
+            <p class="weather-info">
+              Humidity: <span class="info-bold">68%</span>, Wind:
+              <span class="info-bold">3.09km/h</span>
+            </p>
           </div>
         </div>
         <div class="results-temperature">
-          <img class="temperature-icon" src="#" alt="" />
-          <div class="temperature">-2 °C</div>
+          <img
+            class="temperature-icon"
+            src="images/clear-sky-night.png"
+            alt=""
+          />
+          <div class="temperature">
+            <span class="temperature-value">-2</span
+            ><span class="temperature-unit">°C</span>
+          </div>
         </div>
       </div>
+      <footer class="app-footer">
+        Coded by
+        <a href="https://github.com/weisscodes" target="_blank"
+          >Margarita Wise</a
+        >, is
+        <a
+          href="https://github.com/weisscodes/weather-app-vanilla-js"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://sinoptik-weather.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
+      </footer>
     </div>
-    <footer>
-      Coded by
-      <a href="https://github.com/weisscodes" target="_blank">Margarita Wise</a
-      >, is
-      <a
-        href="https://github.com/weisscodes/weather-app-vanilla-js"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://sinoptik-weather.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
-    </footer>
   </body>
 </html>

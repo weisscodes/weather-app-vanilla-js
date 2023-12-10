@@ -1,0 +1,137 @@
+:root {
+  --main-bg-color: #f9f7fe;
+  --accent-color: #885df1;
+  --tertiary-color: #f65282;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 37.5rem;
+  margin: 10vh auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+.app-header {
+  border-bottom: var(--main-bg-color) solid 1px;
+  padding-bottom: 2rem;
+}
+
+.app-logo {
+  width: 10.25rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.app-search-form {
+  width: 100%;
+  display: flex;
+}
+
+.search-input {
+  width: 80%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--main-bg-color);
+  border-radius: 0.5rem;
+}
+
+.search-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.app-results-container {
+  margin: 2rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.city-name {
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.results-additional-info {
+  font-size: 1rem;
+  color: rgba(39, 33, 66, 0.4);
+  margin-top: 0.5rem;
+}
+
+.info-bold {
+  font-weight: bold;
+  color: var(--tertiary-color);
+}
+
+.results-temperature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.temperature-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.temperature-value {
+  font-size: 6rem;
+  line-height: 90%;
+  font-weight: bold;
+}
+
+.temperature-unit {
+  font-size: 2rem;
+}
+
+.app-footer {
+  border-top: var(--main-bg-color) solid 1px;
+  padding-top: 2rem;
+}
+
+.app-footer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgb(118 118 118);
+}
