@@ -14,69 +14,72 @@
     <title>Synoptik Weather APP</title>
   </head>
   <body>
-    <div class="app-container">
-      <div class="app-header">
-        <img
-          src="images/logo-synoptik.svg"
-          alt="synoptik-app-logo"
-          class="app-logo"
-        />
-        <div class="app-search-wrapper">
-          <form class="app-search-form" id="search-form">
-            <input
-              class="search-input"
-              type="search"
-              placeholder="Enter a city..."
-              required
-              id="search-form-input"
-            />
-            <input class="search-button" type="submit" value="Search" />
-          </form>
+    <div class="page-wrapper">
+      <div class="bg-gradient"></div>
+      <div class="app-container">
+        <div class="app-header">
+          <img
+            src="images/logo-synoptik.svg"
+            alt="synoptik-app-logo"
+            class="app-logo"
+          />
+          <div class="app-search-wrapper">
+            <form class="app-search-form" id="search-form">
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Enter a city..."
+                required
+                id="search-form-input"
+              />
+              <input class="search-button" type="submit" value="Search" />
+            </form>
+          </div>
         </div>
+        <div class="app-results-container">
+          <div class="results-info">
+            <div class="results-city-name">
+              <h1 class="city-name" id="city"></h1>
+            </div>
+            <div class="results-additional-info">
+              <p class="weather-info">
+                <span id="current-time"></span>,
+                <span id="weather-condition"></span>
+              </p>
+            </div>
+            <div class="results-additional-info">
+              <p class="weather-info">
+                Humidity: <span class="info-bold" id="humidity"></span>, Wind:
+                <span class="info-bold" id="wind-speed"></span>
+              </p>
+            </div>
+          </div>
+          <div class="results-temperature">
+            <div id="condition-icon-wrapper"></div>
+            <div class="temperature">
+              <span class="temperature-value" id="temperature"></span
+              ><span class="temperature-unit">°C</span>
+            </div>
+          </div>
+        </div>
+        <div class="forecast-table" id="forecast"></div>
+        <footer class="app-footer">
+          Coded by
+          <a href="https://github.com/weisscodes" target="_blank"
+            >Margarita Wise</a
+          >, is
+          <a
+            href="https://github.com/weisscodes/weather-app-vanilla-js"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >
+          and
+          <a href="https://sinoptik-weather.netlify.app/" target="_blank"
+            >hosted on Netlify</a
+          >
+        </footer>
       </div>
-      <div class="app-results-container">
-        <div class="results-info">
-          <div class="results-city-name">
-            <h1 class="city-name" id="city"></h1>
-          </div>
-          <div class="results-additional-info">
-            <p class="weather-info">
-              <span id="current-time"></span>,
-              <span id="weather-condition"></span>
-            </p>
-          </div>
-          <div class="results-additional-info">
-            <p class="weather-info">
-              Humidity: <span class="info-bold" id="humidity"></span>, Wind:
-              <span class="info-bold" id="wind-speed"></span>
-            </p>
-          </div>
-        </div>
-        <div class="results-temperature">
-          <div id="condition-icon-wrapper"></div>
-          <div class="temperature">
-            <span class="temperature-value" id="temperature"></span
-            ><span class="temperature-unit">°C</span>
-          </div>
-        </div>
-      </div>
-      <div class="forecast-table" id="forecast"></div>
-      <footer class="app-footer">
-        Coded by
-        <a href="https://github.com/weisscodes" target="_blank"
-          >Margarita Wise</a
-        >, is
-        <a
-          href="https://github.com/weisscodes/weather-app-vanilla-js"
-          target="_blank"
-          >open-sourced on GitHub</a
-        >
-        and
-        <a href="https://sinoptik-weather.netlify.app/" target="_blank"
-          >hosted on Netlify</a
-        >
-      </footer>
+      <script src="src/index.js"></script>
     </div>
-    <script src="src/index.js"></script>
   </body>
 </html>
