@@ -130,6 +130,7 @@ a {
   display: flex;
   flex-direction: row;
   align-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .forecast-col {

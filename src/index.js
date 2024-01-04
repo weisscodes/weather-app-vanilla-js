@@ -68,7 +68,30 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="forecast-col">
+    <div class="forecast-day">${day}</div>
+    <img src="images/clear-sky-night.png" alt="" class="forecast-icon" />
+    <div class="forecast-temperatures">
+      <span class="forecast-temperature-min"> 12 </span>
+      <span class="forecast-temperature-max"> 16 </span>
+    </div>
+  </div>
+`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Regensburg");
+displayForecast();
