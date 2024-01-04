@@ -130,13 +130,13 @@ a {
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  margin-bottom: 2rem;
 }
 
 .forecast-col {
   text-align: center;
   width: 20%;
   padding: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .app-footer {
